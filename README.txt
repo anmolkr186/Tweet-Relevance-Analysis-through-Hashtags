@@ -1,11 +1,19 @@
 # newIR_Project_Group_20
+process to follow for running the code:
 
 Upload the notebook file on colab and run the complete file to train all the model and check the accuracy on test data. 
 
 Or you can use the pickle file of trained model and can directly use it to classify hijacked or unhijacked on test dataset. 
 
+Dataset:
+link: https://drive.google.com/file/d/1FJiIl7QDe1K6U2gqZ_jdO3_8edHnO6TD/view?usp=sharing
 
-1. INTRODUCTION
+About Dataset: 
+We used the Twitter API to collect the tweets corre- sponding to the hashtags which are trending. For that, we had to apply for a Twitter’s developer account which usu- ally takes weeks to be approved. We were asked about the project and about how we were going to use the collected data, once we replied to them about the details of our work, we got access to the public tweets. The tweets obtained had a lot of information along with the text, such as username of uploader, his/her followers and friends count, tweet time of
+ uploading, retweet information, location of tweet if available and many more. These tweets were used to create the data- set. Another challenge we faced was that there could only be 100 tweets extracted through the API. The tweets were manually annotated into categories of whether the tweet is hijacked or not. Our initial goal was to collect 10,000 tweets and annotate them to create out dataset. Since tweets can be subjective and it depends on the person whether he/she considers it to be hijacked or not, we followed a majority voting approach. Each of the tweet has been manually read and classified by each and every team member. Out of 5, if more than 2 members need to agree to classify a tweet hi- jacked. This way we removed opinionated bias. Moreover, there were numerous hashtags and their respective popular- ity’s were very dynamic. Ultimately we were able to create a dataset of 9470 samples.
+The tweets were collected using Twitter API as men- tioned above and the tweets were retrieved as JSON objects and stored as .csv file. As some tweets had a few columns values as NaN or missing values, when these tweets were stored into a csv file, their column orders were skewed. For example: the User column entry actually got shifted to Geo coordinates columns. This had to be resolved by running a script to iterate over all the columns of the tweet to find the corresponding shifted values. Moreover, since the tweets were collected in batches over a duration of 4-5 days be- cause of the rate limit of twitter API, their format differed a bit. So the script for filtering out the relevant attributes for each batch of tweets varied a little. In the final dataset, we had just the columns named label, full-text, created at, screen name, followers count, friends count, retweets count, favorites count. The rest of the features were not relevant to our goal.
+
+INTRODUCTION
 A difficult problem for Twitter is to flag hijacked tweets from accounts with lesser interaction Spread of malicious and spam content through links is easily possible because external web documents are outside the scope of the Twitter ecosystem to process. Many sensitive topics and important topics like mental health get diverted. JusticeforSSR and FarmersProtest were hijacked for personal agenda by certain people/parties. This dis- course has promoted the spread of fake news/manipulated media, bullying, trolling, and slut-shaming among many other problems. Some trending hashtags are just used in the tweets to get better visibility for promoting irrelevant events.
 
 Twitter is one of the most active and open platforms for sharing information and opinions on any subject matter.
