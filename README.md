@@ -1,2 +1,6 @@
 # newIR_Project_Group_20
 In this project, we tried to classify legitimate and hijacked tweets/trends by analysing and evaluating text corpus and common spam account attributes under popular hashtags using NLP and machine learning techniques. We curated our own dataset for tweets using Twitter Search and Streaming API for both historical and real-time data.  We further introduced a new attribute of scoring popular user sentiment and evaluating all the tweets under a particular hashtag/campaign to improve upon existing methods. We use tfidf-vectorizer, Count-vectorizer and tweet information(User's friends, followers, retweet count, and favorites count) to train the ML models, and from their output we vote out the best results. We train the following ML models with the above mentioned data: K - nearest neighbour, Support Vector Machine, logistic regression, XG boosting classifier, Gradient boosting, Ada-boost classifier, Random forest classifier, Extra Tree Classifier, Neural Network, Gaussian naive bayes, Multinomial naive bayes classfier. 
+
+Upload the notebook file on colab and run the complete file to train all the model and check the accuracy on test data. 
+
+Or you can use the pickle file of trained model and can directly use it to classify hijacked or unhijacked on test dataset. 
