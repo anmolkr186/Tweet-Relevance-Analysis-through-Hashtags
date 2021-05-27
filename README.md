@@ -25,6 +25,7 @@ In this project, we tried to classify legitimate and hijacked tweets/trends by a
 ## Methodology
 
 The tweets were collected using Twitter API as men- tioned above and the tweets were retrieved as JSON objects and stored as .csv file. After the creation of the dataset of sufficient size, we proceed with dataset cleaning and using NLP techniques like tokenization, stop-words removal, and stemming/ lemmati- zation. Techniques like tf-idf, ranking algorithms, and vec- tor space models are used for scoring words.
+
 We then applied various techniques on the obtained posts or tweets and obtain the sentiment, retweets/reposts, likes, uploader, uploader’s data (like followers, following, verified or not), related hashtags (their relative scores), and the tf-idf score of the post. The Machine Learning models we used are K - nearest neighbour, Support Vector Machine, lo- gistic regression, XG boosting classifier, Gradient boosting, Ada-boost classifier, Random forest classifier, Extra Tree Classifier, Neural Network, Gaussian naive bayes, Multino- mial naive bayes classifier. We let all the ML models run through the dataset we prepared, which contains a detailed examination of the posts and annotated classes (hijacked or not). After which we used the obtained weights to vali- date the rest of the dataset which will ultimately return us an accuracy, recall, F1- score, precision measure, and their macro-average and weighted average.
 
 ## Results
@@ -32,11 +33,11 @@ We then applied various techniques on the obtained posts or tweets and obtain th
 After the whole dataset was created and the models were trained, we obtained an accuracy of 95.0% with multinomial naive bayes.
 we have up-sampled it to remove class imbalance, which contains a detailed examination of the posts and annotated classes( hi- jacked or not). The obtained weights were used to validate the rest of the dataset which ultimately returned us an accu- racy and precision measure. We then used all these model and applied voting classifiers on these classifiers to obtain the best generalised model to avoid overfitting and saved this model and other individual best models using pickle for future use. The best model is MLP which gave us accuracy of 97.1
 After calculating the cumulative score of all the above 30 models by the voting classifier, we obtain the following statistics:
-Accuracy: 0.981
-Precision: 0.98
-Recall : 0.98
-F1-score: 0.98
-Support : 4472
+* Accuracy: 0.981
+* Precision: 0.98
+* Recall : 0.98
+* F1-score: 0.98
+* Support : 4472
 
 ## Conclusion
 
